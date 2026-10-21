@@ -4,5 +4,5 @@ window.MENSURA_CONFIG = {
   cargo: 'Gestão de Ativos',
   whatsapp: '5511931493287',
   email: 'victor.evangelista@mensuraengenharia.com.br',
-  apresentacao: 'https://mensuraengenharia.com.br' // Site institucional informado
+  apresentacao: 'https://mensuraengenharia.com.br/gestao-de-ativos/' // Apresentação Gestão de Ativos
 };
