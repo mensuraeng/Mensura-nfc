@@ -3,7 +3,7 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
-<meta name="theme-color" content="#161617">
+<meta name="theme-color" content="#0A0A0A">
 <meta name="robots" content="noindex">
 <meta name="description" content="Cartão digital MENSURA Engenharia">
 <title>MENSURA Engenharia | Cartão digital</title>
@@ -14,10 +14,11 @@
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Playfair+Display:wght@600&display=swap" rel="stylesheet">
 <style>
 :root{
-  --bg:#0E0E0F;--panel:#161617;
-  --text:#ECE8E0;--muted:#9C988F;
-  --accent:#79AD84;--ink:#0E0E0F;
-  --hair:rgba(255,255,255,.08);--hair-green:rgba(121,173,132,.28);
+  /* paleta cinza da linha Gestão de Ativos / Gestão Técnica do Patrimônio */
+  --bg:#0A0A0A;--panel:#141517;
+  --text:#F9F9F7;--muted:#A8A8A8;
+  --accent:#A0AEC0;--accent-soft:#CBD5E0;--slate:#4A5568;--ink:#1A1A1A;
+  --hair:rgba(255,255,255,.08);--hair-green:rgba(160,174,192,.30);
   --ease:cubic-bezier(.16,1,.3,1);
 }
 *{box-sizing:border-box}
@@ -39,31 +40,30 @@ body::before{content:"";position:fixed;inset:0;pointer-events:none;opacity:.045;
 }
 .card::before{content:"";display:block;height:3px;background:var(--accent)}
 .content{padding:32px 28px 28px}
-.logo{display:block;width:100%;max-width:300px;height:auto;margin:0 auto}
+.logo{display:block;width:100%;max-width:280px;height:auto;margin:4px auto 0}
 .line{height:1px;background:var(--hair-green);margin:28px 0}
-.eyebrow{display:flex;align-items:center;gap:12px;color:var(--accent);font-size:11px;font-weight:600;letter-spacing:.24em;text-transform:uppercase}
-.eyebrow::before{content:"";width:24px;height:1px;background:var(--accent)}
-.name{font-family:"Playfair Display",Georgia,serif;font-weight:600;font-size:32px;line-height:1.25;letter-spacing:-.025em;margin:12px 0 4px}
-.role{color:var(--muted);font-size:16px;margin:0 0 28px}
+.eyebrow{display:flex;align-items:center;justify-content:center;gap:12px;color:var(--accent);font-size:11px;font-weight:600;letter-spacing:.24em;text-transform:uppercase}
+.eyebrow::before,.eyebrow::after{content:"";width:24px;height:1px;background:var(--accent)}
+.name{text-align:center;font-family:"Playfair Display",Georgia,serif;font-weight:600;font-size:32px;line-height:1.25;letter-spacing:-.025em;margin:12px 0 4px}
+.role{text-align:center;color:var(--muted);font-size:16px;margin:0 0 28px}
 .buttons{display:grid;gap:12px}
 .btn{
   display:flex;align-items:center;justify-content:center;gap:12px;
   min-height:52px;padding:14px 16px;border-radius:8px;
   font-size:15px;font-weight:500;letter-spacing:.01em;text-decoration:none;
-  color:var(--text);background:transparent;border:1px solid rgba(236,232,224,.22);
+  color:var(--text);background:transparent;border:1px solid rgba(203,213,224,.22);
   transition:background .25s var(--ease),border-color .25s var(--ease),color .25s var(--ease);
 }
-.btn:hover,.btn:focus-visible{border-color:var(--accent);color:#fff;background:rgba(121,173,132,.08)}
+.btn:hover,.btn:focus-visible{border-color:var(--accent);color:#fff;background:rgba(160,174,192,.10)}
 .btn:focus-visible{outline:2px solid var(--accent);outline-offset:2px}
-.btn.primary{background:var(--accent);border-color:var(--accent);color:var(--ink);font-weight:600}
-.btn.primary:hover,.btn.primary:focus-visible{background:#8dbd97;border-color:#8dbd97;color:var(--ink)}
+.btn.primary{background:var(--accent-soft);border-color:var(--accent-soft);color:var(--ink);font-weight:600}
+.btn.primary:hover,.btn.primary:focus-visible{background:#EDF2F7;border-color:#EDF2F7;color:var(--ink)}
 .btn svg{width:20px;height:20px;flex:none;fill:none;stroke:currentColor;stroke-width:1.8;stroke-linecap:round;stroke-linejoin:round}
 .notice{margin:16px 0 0;color:#E0A23B;font-size:12px;line-height:1.5;text-align:center}
 .notice:empty{display:none}
 .foot{margin-top:28px;padding-top:20px;border-top:1px solid var(--hair);text-align:center}
 .axes{color:var(--accent);font-size:10.5px;font-weight:600;letter-spacing:.18em;text-transform:uppercase;white-space:nowrap}
-.org{color:var(--muted);font-size:12px;margin-top:6px;line-height:1.5}
-.org span{display:block}
+.org-name{color:var(--text);font-size:13px;font-weight:500;letter-spacing:.04em;margin-bottom:6px}
 @keyframes up{from{opacity:0;transform:translateY(14px)}to{opacity:1;transform:none}}
 @media (prefers-reduced-motion:reduce){.card{animation:none}.btn{transition:none}}
 @media (max-width:360px){.content{padding:28px 20px 24px}.name{font-size:28px}}
@@ -73,7 +73,7 @@ body::before{content:"";position:fixed;inset:0;pointer-events:none;opacity:.045;
 <main class="card">
   <div class="content">
     <header>
-      <img class="logo" src="assets/mensura-logo.webp" width="1092" height="346" alt="MENSURA Engenharia">
+      <img class="logo" src="assets/mensura-logo.png" width="1084" height="260" alt="MENSURA Engenharia">
     </header>
     <div class="line"></div>
     <div class="eyebrow">Cartão de visita digital</div>
@@ -87,8 +87,8 @@ body::before{content:"";position:fixed;inset:0;pointer-events:none;opacity:.045;
     </nav>
     <p class="notice" id="notice"></p>
     <footer class="foot">
-      <div class="axes">Planejamento · Controle · Decisão</div>
-      <div class="org"><span>MENSURA Engenharia</span><span>Governança Operacional de Obras</span></div>
+      <div class="org-name">MENSURA Engenharia</div>
+      <div class="axes">Inspeção · Manutenção · Decisão</div>
     </footer>
   </div>
 </main>
