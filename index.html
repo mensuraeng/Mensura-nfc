@@ -63,8 +63,7 @@ body::before{content:"";position:fixed;inset:0;pointer-events:none;opacity:.045;
 .notice:empty{display:none}
 .foot{margin-top:28px;padding-top:20px;border-top:1px solid var(--hair);text-align:center}
 .axes{color:var(--accent);font-size:10.5px;font-weight:600;letter-spacing:.18em;text-transform:uppercase;white-space:nowrap}
-.org{color:var(--muted);font-size:12px;margin-top:6px;line-height:1.5}
-.org span{display:block}
+.org-name{color:var(--text);font-size:13px;font-weight:500;letter-spacing:.04em;margin-bottom:6px}
 @keyframes up{from{opacity:0;transform:translateY(14px)}to{opacity:1;transform:none}}
 @media (prefers-reduced-motion:reduce){.card{animation:none}.btn{transition:none}}
 @media (max-width:360px){.content{padding:28px 20px 24px}.name{font-size:28px}}
@@ -88,8 +87,8 @@ body::before{content:"";position:fixed;inset:0;pointer-events:none;opacity:.045;
     </nav>
     <p class="notice" id="notice"></p>
     <footer class="foot">
-      <div class="axes">Planejamento · Controle · Decisão</div>
-      <div class="org"><span>MENSURA Engenharia</span><span>Governança Operacional de Obras</span></div>
+      <div class="org-name">MENSURA Engenharia</div>
+      <div class="axes">Inspeção · Manutenção · Decisão</div>
     </footer>
   </div>
 </main>
